@@ -29,7 +29,7 @@
 <body>
 <main class="wrap">
   <h1>Privacy Policy</h1>
-  <p class="updated">Chronicat: Cat Diary &amp; AI · Last updated: 22 July 2026</p>
+  <p class="updated">Chronicat: Cat Diary &amp; AI · Last updated: 24 August 2026</p>
 
   <p class="lead">This Privacy Policy explains how <strong>Pixoro Apps</strong> ("we", "us", "our") collects, uses, and protects information when you use the <strong>Chronicat: Cat Diary &amp; AI</strong> mobile application (the "App"). By downloading or using the App, you agree to the practices described in this Policy. If you do not agree, please do not use the App.</p>
 
@@ -40,20 +40,20 @@
   <h2>2. Summary</h2>
   <ul>
     <li>Chronicat is a diary and AI assistant that helps you track your cat's life (feeding, weight, medications, vet visits, notes, and other events).</li>
-    <li><strong>The data you create about your cat and your AI chat history are stored locally on your device by default.</strong></li>
+    <li><strong>Your cat profiles and diary events are stored in the cloud</strong>, using our backend provider Supabase, so they stay backed up and available across your devices. <strong>Your AI chat history is stored locally on your device only</strong> and is not synced to the cloud.</li>
+    <li>You can optionally invite another person to share a cat with you (for example, a family member). Anyone you share a cat with can view, add, and edit that cat's data — see Section 5.</li>
     <li>When you use the AI assistant, the content of your questions and relevant cat data are sent to a third-party AI provider to generate a response.</li>
     <li>Subscription purchases are processed by the app store (Google Play), not by us. We do not receive or store your payment card details.</li>
-    <li>In the future, we plan to offer optional cloud synchronization of your cat events via a third-party backend (Supabase). This Policy will be updated before that feature is enabled, and sync will be optional.</li>
   </ul>
 
   <h2>3. Information We Collect</h2>
-  <h3>3.1 Information you provide (stored locally on your device)</h3>
+  <h3>3.1 Information you provide</h3>
   <ul>
     <li><strong>Cat profile data</strong>: name, photo, breed, date of birth, sex, neuter/spay status, microchip number, allergies, chronic conditions, and similar details you choose to enter.</li>
     <li><strong>Event and diary data</strong>: feeding, water, play/activity, weight, vet visits, medications, vaccinations, parasite treatments, litter/toileting, symptoms, grooming, behavioral notes, photos, and free-text notes you create.</li>
     <li><strong>AI chat history</strong>: the questions you ask the AI assistant and the responses you receive.</li>
   </ul>
-  <p>By default, all of the above is stored <strong>locally on your device</strong> and is not transmitted to or accessible by us, except as described in Section 3.3 (AI processing) and Section 5 (future cloud sync).</p>
+  <p><strong>Cat profile data and event/diary data</strong> are stored on our cloud backend provider, Supabase, so they are backed up and available across your devices — see Section 5 for details. <strong>Your AI chat history is stored locally on your device only</strong> and is not transmitted to or accessible by us, except as described in Section 3.3 (AI processing).</p>
 
   <h3>3.2 Subscription and purchase information</h3>
   <p>When you purchase a subscription or start a free trial, the transaction is handled by the applicable app store (<strong>Google Play</strong>). We may receive limited, non-sensitive information from the store to confirm your subscription status (for example, a purchase token or subscription state). <strong>We do not collect or store your full payment card number or billing address</strong> — these are handled entirely by the app store.</p>
@@ -82,14 +82,18 @@
   </ul>
   <p>We do <strong>not</strong> sell your personal information, and we do <strong>not</strong> use your cat's health data for advertising.</p>
 
-  <h2>5. Cloud Synchronization (Planned Feature)</h2>
-  <p>The App currently stores your data locally. In a future version, we plan to offer <strong>optional</strong> cloud synchronization of your cat events using a third-party backend provider, <strong>Supabase</strong> (operated by Supabase, Inc.). When and if this feature becomes available:</p>
+  <h2>5. Cloud Storage, Sync, and Sharing</h2>
+  <p>Your cat profiles and diary events are stored and synced using a third-party backend provider, <strong>Supabase</strong> (operated by Supabase, Inc.), so they are backed up and available whenever you sign in — including on a new or different device. This happens automatically as part of using the App; there is no local-only mode for this data.</p>
+  <h3>5.1 Sharing a cat with another user</h3>
+  <p>You may choose to invite another person (for example, a family member or co-caregiver) to share a cat with you, by generating an invite code or link inside the App. If they accept:</p>
   <ul>
-    <li>Sync will be <strong>opt-in</strong> — your data will only leave your device if you choose to enable it (for example, by creating an account).</li>
-    <li>Synced data will be transmitted and stored on Supabase infrastructure to allow backup and access across your devices.</li>
-    <li>We will update this Privacy Policy and, where required, request your consent before enabling this feature.</li>
+    <li>They can view that cat's full profile and event history, and add, edit, or delete events for that cat.</li>
+    <li>Only the person who originally created the cat profile can delete the cat itself; any co-owner can view and log events.</li>
+    <li>You can see who else has access to a shared cat, and remove their access, from within the App.</li>
+    <li>Sharing a cat is entirely your choice — a cat is private to you unless and until you invite someone to it.</li>
   </ul>
-  <p>Until you enable cloud sync, your event and diary data remain on your device.</p>
+  <h3>5.2 What this means if you delete your account</h3>
+  <p>If you created a cat that is shared with other users and you delete your account, that cat and its full event history are deleted for everyone it was shared with, not just for you. If you are a co-owner (not the creator) of a shared cat and you delete your account, the cat and events logged by other co-owners remain, but the events you personally logged are removed along with your account. See our <a href="delete-account.html">account deletion page</a> for details.</p>
 
   <h2>6. How We Share Information</h2>
   <p>We share information only as described here:</p>
@@ -97,7 +101,8 @@
     <li><strong>App stores (Google Play):</strong> to process subscriptions, trials, and renewals.</li>
     <li><strong>AI provider (OpenAI):</strong> to generate assistant responses, as described in Section 3.3.</li>
     <li><strong>Analytics and crash-reporting providers:</strong> to maintain and improve the App.</li>
-    <li><strong>Cloud backend (Supabase):</strong> only if and when you enable optional cloud sync (Section 5).</li>
+    <li><strong>Cloud backend (Supabase):</strong> to store and sync your cat and event data, as described in Section 5.</li>
+    <li><strong>Other users you invite (sharing):</strong> if you invite someone to share a cat with you, that cat's profile and event history become visible and editable by them, as described in Section 5.1.</li>
     <li><strong>Legal reasons:</strong> if required by law, regulation, legal process, or to protect the rights, safety, or property of users or others.</li>
     <li><strong>Business transfers:</strong> if we are involved in a merger, acquisition, or sale of assets, information may be transferred as part of that transaction, subject to this Policy.</li>
   </ul>
@@ -105,14 +110,14 @@
 
   <h2>7. Data Retention</h2>
   <ul>
-    <li><strong>Local data</strong> remains on your device until you delete it or uninstall the App. Uninstalling the App will typically remove locally stored data; deleted data may not be recoverable.</li>
+    <li><strong>Cat profiles and event data</strong> are retained on our cloud backend until you delete the individual cat/event, delete your account, or (for a shared cat) the cat's creator deletes their account. Uninstalling the App does not delete this data, since it is stored in the cloud, not only on your device.</li>
+    <li><strong>AI chat history</strong> remains on your device until you delete it or uninstall the App. Uninstalling the App will typically remove it; deleted data may not be recoverable.</li>
     <li><strong>Subscription records</strong> are retained by the app store according to its policies.</li>
     <li><strong>AI chat content</strong> submitted to the AI provider is handled according to that provider's retention terms.</li>
-    <li>If you enable cloud sync in the future, synced data will be retained until you delete it or close your account.</li>
   </ul>
 
   <h2>8. Security</h2>
-  <p>We take reasonable technical and organizational measures to protect your information. Because your primary data is stored locally, its security also depends on the security of your device (for example, device lock, encryption, and OS updates). No method of storage or transmission is completely secure, and we cannot guarantee absolute security.</p>
+  <p>We take reasonable technical and organizational measures to protect your information. Your cat and event data is stored on Supabase's infrastructure and protected by access controls that restrict it to your account and anyone you explicitly share a cat with. Your AI chat history is stored only on your device, so its security also depends on the security of your device (for example, device lock, encryption, and OS updates). No method of storage or transmission is completely secure, and we cannot guarantee absolute security.</p>
 
   <h2>9. Your Rights</h2>
   <p>Depending on your location, you may have rights regarding your personal data, including the right to:</p>
@@ -123,15 +128,15 @@
     <li>Request data portability.</li>
     <li>Lodge a complaint with a data protection authority.</li>
   </ul>
-  <p>Because most data is stored locally, you can exercise many of these rights directly within the App (by editing or deleting entries) or by uninstalling the App. For other requests, contact us at <a href="mailto:pixoro.apps@gmail.com">pixoro.apps@gmail.com</a>.</p>
-  <p><strong>For EU/EEA/UK users (GDPR):</strong> our legal bases for processing are performance of a contract (providing the App and its features), your consent (for optional features such as AI processing and future cloud sync), and our legitimate interests (maintaining and improving the App).</p>
+  <p>You can exercise many of these rights directly within the App, by editing or deleting individual cats/events, or by deleting your account (see our <a href="delete-account.html">account deletion page</a>) — uninstalling the App alone does not delete your cloud-stored cat and event data. For other requests, contact us at <a href="mailto:pixoro.apps@gmail.com">pixoro.apps@gmail.com</a>.</p>
+  <p><strong>For EU/EEA/UK users (GDPR):</strong> our legal bases for processing are performance of a contract (providing the App and its features, including cloud storage of your cat data), your consent (for optional features such as AI processing and inviting others to share a cat), and our legitimate interests (maintaining and improving the App).</p>
   <p><strong>For California users (CCPA/CPRA):</strong> we do not sell or share personal information as defined by California law. You have the right to know, delete, and correct personal information, and to not be discriminated against for exercising these rights.</p>
 
   <h2>10. Children's Privacy</h2>
   <p>The App is not directed to children under <strong>16</strong>, and we do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us and we will take appropriate steps to delete it.</p>
 
   <h2>11. International Data Transfers</h2>
-  <p>If you use the App outside the country where our service providers are located, information processed by the AI provider, app store, or (in the future) cloud backend may be transferred to and processed in other countries, including outside your own. Where required, we rely on appropriate safeguards for such transfers.</p>
+  <p>If you use the App outside the country where our service providers are located, information processed by the AI provider, app store, or our cloud backend (Supabase) may be transferred to and processed in other countries, including outside your own. Where required, we rely on appropriate safeguards for such transfers.</p>
 
   <h2>12. Changes to This Policy</h2>
   <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last updated" date and, where appropriate, notify you within the App. Your continued use of the App after changes take effect constitutes acceptance of the updated Policy.</p>
