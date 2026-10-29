@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["9L8GSGT74K.com.pixoroapps.pet"],
+        "components": [
+          { "/": "/join", "comment": "Shared-cat invite: /join?code=XXXX opens the join screen" }
+        ]
+      }
+    ]
+  }
+}

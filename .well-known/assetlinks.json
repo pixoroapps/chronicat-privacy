@@ -1,0 +1,14 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.pixoroapps.pet",
+      "sha256_cert_fingerprints": [
+        "34:9A:3F:F8:98:4D:32:3A:FC:C4:72:B3:1C:CA:80:EE:A7:6F:07:48:A7:13:B6:24:81:AA:F0:EF:49:01:7E:66",
+        "FC:7E:95:85:6F:70:9A:02:00:ED:94:98:8E:95:A8:A0:A4:99:8A:AA:D0:1C:02:05:9B:15:97:FB:39:62:94:55",
+        "EE:40:DE:E1:0C:E1:4B:40:7E:DB:3C:B3:0D:E3:D9:FC:81:E2:48:00:84:60:8D:19:17:65:F0:FD:AD:10:A2:1B"
+      ]
+    }
+  }
+]

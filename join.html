@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- An invite link lands here when the app didn't open it (not installed yet, or opened inside a messenger's browser).
+     With the app installed, Android App Links / iOS Universal Links open /join straight in the app (see .well-known). -->
+<meta name="robots" content="noindex">
+<title>Join a cat on Chronicat</title>
+<meta name="description" content="You've been invited to help take care of a cat in Chronicat — a shared cat diary and health tracker.">
+<link rel="icon" type="image/png" href="favicon.png?v=2">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=2">
+<meta name="theme-color" content="#1c1510">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Chronicat">
+<meta property="og:title" content="Help me take care of my cat in Chronicat">
+<meta property="og:description" content="Tap to join — feeding, weight, meds and vet visits on one shared timeline.">
+<meta property="og:image" content="https://chronicat.app/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/comfortaa_bold.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  @font-face { font-family:"Comfortaa"; font-weight:700; font-display:swap; src:url(assets/fonts/comfortaa_bold.woff2) format("woff2"); }
+  @font-face { font-family:"Mulish"; font-weight:400; font-display:swap; src:url(assets/fonts/mulish_regular.woff2) format("woff2"); }
+  @font-face { font-family:"Mulish"; font-weight:600; font-display:swap; src:url(assets/fonts/mulish_semibold.woff2) format("woff2"); }
+  @font-face { font-family:"Mulish"; font-weight:800; font-display:swap; src:url(assets/fonts/mulish_extrabold.woff2) format("woff2"); }
+
+  :root {
+    --night:#1c1510; --night-2:#261d17; --cream:#fbf6ec; --sub:#cbbba6; --kicker:#b89f7e;
+    --amber:#f2a04a; --ember:#c9562f; --hi:#ffd68a;
+  }
+  * { box-sizing:border-box; }
+  html, body { min-height:100%; }
+  body { margin:0; color:var(--cream); font-family:"Mulish",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    font-size:17px; line-height:1.55; -webkit-font-smoothing:antialiased;
+    background:
+      radial-gradient(70% 45% at 50% 0%, rgba(201,86,47,.38), transparent 70%),
+      radial-gradient(50% 35% at 70% 20%, rgba(242,160,74,.22), transparent 70%),
+      linear-gradient(180deg, var(--night-2), #120d0a) fixed;
+    background-color:#120d0a; }
+  a { color:var(--hi); }
+  h1 { font-family:"Comfortaa","Mulish",sans-serif; font-weight:700; letter-spacing:-.01em; margin:0; }
+
+  .top { max-width:520px; margin:0 auto; padding:20px 16px 0; display:flex; align-items:center; justify-content:space-between; }
+  .brand { display:flex; align-items:center; gap:10px; color:var(--cream); text-decoration:none; font-family:"Comfortaa",sans-serif; font-weight:700; font-size:1.1rem; }
+  .brand img { width:32px; height:32px; border-radius:8px; }
+  .lang { display:flex; background:rgba(251,246,236,.08); border:1px solid rgba(251,246,236,.14); border-radius:999px; padding:3px; }
+  .lang button { all:unset; cursor:pointer; color:var(--sub); font-weight:800; font-size:.78rem; letter-spacing:.04em; padding:5px 11px; border-radius:999px; }
+  .lang button[aria-pressed="true"] { background:var(--cream); color:var(--night); }
+  .lang button:focus-visible { outline:2px solid var(--amber); outline-offset:2px; }
+
+  main { max-width:520px; margin:0 auto; padding:44px 16px 48px; text-align:center; }
+  .icon { width:96px; height:96px; border-radius:22px; margin:0 auto 26px; display:block; box-shadow:0 16px 40px rgba(0,0,0,.45); }
+  h1 { font-size:clamp(1.7rem, 7vw, 2.2rem); line-height:1.2; }
+  .lede { color:var(--sub); font-size:1.08rem; margin:14px auto 30px; max-width:26em; }
+
+  .code { border:1px solid rgba(251,246,236,.16); background:rgba(251,246,236,.05); border-radius:22px; padding:20px 16px 16px; margin:0 0 22px; }
+  .code small { display:block; color:var(--kicker); font-weight:800; font-size:.74rem; letter-spacing:.14em; text-transform:uppercase; }
+  .code output { display:block; font-family:"Comfortaa",sans-serif; font-weight:700; font-size:clamp(1.9rem, 9vw, 2.5rem); letter-spacing:.12em; color:var(--hi); margin:8px 0 10px; word-break:break-all; }
+  .copy { all:unset; cursor:pointer; color:var(--cream); font-weight:800; font-size:.9rem; padding:7px 16px; border-radius:999px; border:1px solid rgba(251,246,236,.22); }
+  .copy:focus-visible { outline:2px solid var(--amber); outline-offset:2px; }
+
+  .open { display:block; text-decoration:none; color:var(--night); background:linear-gradient(180deg, var(--hi), var(--amber)); font-weight:800; font-size:1.08rem;
+    padding:16px 20px; border-radius:16px; box-shadow:0 10px 28px rgba(242,160,74,.28); }
+  .open:focus-visible { outline:2px solid var(--cream); outline-offset:3px; }
+  .hint { color:var(--kicker); font-size:.9rem; margin:12px 0 34px; }
+
+  h2 { font-family:"Comfortaa",sans-serif; font-weight:700; font-size:1.1rem; margin:0 0 14px; }
+  .stores { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+  .store { display:inline-flex; align-items:center; gap:12px; text-decoration:none; color:var(--night); background:var(--cream); text-align:left;
+    padding:11px 20px 11px 16px; border-radius:14px; flex:1 1 200px; max-width:240px; }
+  .store svg { width:26px; height:26px; flex:none; }
+  .store small { display:block; font-size:.72rem; font-weight:600; color:#6b625a; line-height:1.1; }
+  .store b { display:block; font-size:1.05rem; font-weight:800; line-height:1.25; }
+  .store.soon { background:transparent; color:var(--cream); border:1px dashed rgba(251,246,236,.3); opacity:.8; }
+  .store.soon small { color:var(--hi); }
+
+  ol { text-align:left; color:var(--sub); margin:30px auto 0; padding-left:1.3em; max-width:24em; }
+  ol li { margin:8px 0; }
+  ol b { color:var(--cream); }
+  .missing { color:var(--sub); }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <a class="brand" href="./"><img src="assets/img/icon-256.png?v=2" alt="">Chronicat</a>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+    <button type="button" data-set-lang="uk" aria-pressed="false">УКР</button>
+  </div>
+</header>
+
+<main>
+  <img class="icon" src="assets/img/icon-256.png?v=2" alt="">
+  <h1 data-i18n="h1">You’re invited to help take care of a cat</h1>
+  <p class="lede" data-i18n="lede">Chronicat is a shared cat diary: feeding, weight, meds and vet visits — everyone in the family sees the same timeline.</p>
+
+  <div id="with-code">
+    <div class="code">
+      <small data-i18n="code-label">Invite code</small>
+      <output id="code" aria-live="polite"></output>
+      <button type="button" class="copy" id="copy" data-i18n="copy">Copy code</button>
+    </div>
+
+    <a class="open" id="open" href="#" data-i18n="open">Open in Chronicat</a>
+    <p class="hint" data-i18n="hint">Already have the app? This button opens the invite in it.</p>
+  </div>
+
+  <p class="missing" id="no-code" hidden data-i18n="missing">This link has no invite code. Ask the person who invited you to send a new one.</p>
+
+  <h2 data-i18n="get">Don’t have Chronicat yet?</h2>
+  <div class="stores">
+    <a class="store" href="https://play.google.com/store/apps/details?id=com.pixoroapps.pet">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34a853" d="M3.6 2.3 13.4 12l-9.8 9.7c-.35-.2-.6-.6-.6-1.1V3.4c0-.5.25-.9.6-1.1z"/><path fill="#fbbc04" d="m16.8 8.6 3.4 1.95c.95.55.95 1.9 0 2.45l-3.4 1.95L13.4 12z"/><path fill="#ea4335" d="M3.6 21.7 13.4 12l3.4 3.4-11.6 6.6c-.55.3-1.15.2-1.6-.3z"/><path fill="#4285f4" d="M3.6 2.3c.45-.5 1.05-.6 1.6-.3l11.6 6.6-3.4 3.4z"/></svg>
+      <span><small data-i18n="gp-small">Get it on</small><b>Google Play</b></span>
+    </a>
+    <div class="store soon" aria-disabled="true">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.37 12.6c-.02-2.2 1.8-3.26 1.88-3.31-1.03-1.5-2.62-1.7-3.18-1.73-1.35-.14-2.64.8-3.33.8-.69 0-1.74-.78-2.87-.76-1.47.02-2.83.86-3.59 2.18-1.54 2.66-.39 6.6 1.1 8.76.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.86.69 1.18-.02 1.93-1.07 2.65-2.13.84-1.22 1.18-2.4 1.2-2.47-.03-.01-2.3-.88-2.32-3.52zM14.2 6.13c.6-.73 1.01-1.75.9-2.76-.87.04-1.92.58-2.54 1.31-.56.64-1.05 1.67-.92 2.66.97.08 1.96-.49 2.56-1.21z"/></svg>
+      <span><small data-i18n="as-soon">Coming soon to the</small><b>App Store</b></span>
+    </div>
+  </div>
+
+  <ol>
+    <li data-i18n-html="s1">Install Chronicat and sign in.</li>
+    <li data-i18n-html="s2">Tap the invite link again — or go to <b>Settings → My cats → Enter code</b>.</li>
+    <li data-i18n-html="s3">The cat appears in your list, with its whole history.</li>
+  </ol>
+</main>
+
+<script>
+(function () {
+  var uk = {
+    "title": "Приєднатися до кота в Chronicat",
+    "h1": "Тебе запросили доглядати кота",
+    "lede": "Chronicat — спільний щоденник кота: їжа, вага, ліки й візити до ветеринара. Уся родина бачить одну стрічку.",
+    "code-label": "Код запрошення",
+    "copy": "Скопіювати код",
+    "copied": "Скопійовано",
+    "open": "Відкрити в Chronicat",
+    "hint": "Застосунок уже встановлено? Ця кнопка відкриє в ньому запрошення.",
+    "missing": "У цьому посиланні немає коду. Попроси того, хто тебе запросив, надіслати нове.",
+    "get": "Ще немає Chronicat?",
+    "gp-small": "Доступно в",
+    "as-soon": "Незабаром в",
+    "s1": "Встанови Chronicat і увійди.",
+    "s2": "Ще раз натисни посилання — або відкрий <b>Налаштування → Мої коти → «Ввести код»</b>.",
+    "s3": "Кіт з’явиться у твоєму списку разом з усією історією."
+  };
+  var en = { title: document.title, copied: "Copied" };
+  ["data-i18n", "data-i18n-html"].forEach(function (attr) {
+    document.querySelectorAll("[" + attr + "]").forEach(function (el) {
+      en[el.getAttribute(attr)] = attr === "data-i18n-html" ? el.innerHTML : el.textContent;
+    });
+  });
+  var dict = en;
+
+  function apply(lang) {
+    dict = lang === "uk" ? uk : en;
+    document.documentElement.lang = lang;
+    document.title = dict.title;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) { el.textContent = dict[el.getAttribute("data-i18n")]; });
+    document.querySelectorAll("[data-i18n-html]").forEach(function (el) { el.innerHTML = dict[el.getAttribute("data-i18n-html")]; });
+    document.querySelectorAll("[data-set-lang]").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-set-lang") === lang)); });
+  }
+
+  var params = new URLSearchParams(location.search);
+  var saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (e) {}
+  var lang = params.get("lang") || saved || ((navigator.language || "").toLowerCase().indexOf("uk") === 0 ? "uk" : "en");
+  if (lang !== "uk") lang = "en";
+  if (lang === "uk") apply("uk");
+  document.querySelectorAll("[data-set-lang]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var l = b.getAttribute("data-set-lang");
+      try { localStorage.setItem("lang", l); } catch (e) {}
+      apply(l);
+    });
+  });
+
+  // Codes are letters and digits; anything else in the query is dropped rather than echoed into the page.
+  var code = (params.get("code") || "").toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 16);
+  if (!code) {
+    document.getElementById("with-code").hidden = true;
+    document.getElementById("no-code").hidden = false;
+    return;
+  }
+  document.getElementById("code").textContent = code.length === 8 ? code.slice(0, 4) + " " + code.slice(4) : code;
+
+  // The page is on the same domain as the link, so tapping a chronicat.app link here wouldn't hand off to the app;
+  // the button uses the app's own scheme instead. On Android an intent: URL opens the app, or Google Play without it.
+  var isAndroid = /android/i.test(navigator.userAgent);
+  document.getElementById("open").href = isAndroid
+    ? "intent://join?code=" + code + "#Intent;scheme=chronicat;package=com.pixoroapps.pet;end"
+    : "chronicat://join?code=" + code;
+
+  var copy = document.getElementById("copy");
+  copy.addEventListener("click", function () {
+    var done = function () {
+      copy.textContent = dict.copied;
+      setTimeout(function () { copy.textContent = dict.copy; }, 1600);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(code).then(done, function () {});
+    }
+  });
+})();
+</script>
+</body>
+</html>
